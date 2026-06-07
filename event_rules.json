@@ -12,6 +12,18 @@
       "durationMinutes": 30
     },
     {
+      "serverKeywords": ["funtime"],
+      "comment": "Правило для рамочных ивентов (Маяк, Мистик и др.), призванных игроками",
+      "regexPattern": "«\\s*([^»]+?)\\s*»[\\s\\S]*?на\\s+координатах\\s*\\[\\s*(-?\\d+)\\s+(-?\\d+)\\s+(-?\\d+)\\s*\\]",
+      "nameGroup": 1,
+      "xGroup": 2,
+      "yGroup": 3,
+      "zGroup": 4,
+      "colorHex": "FF00FFCC",
+      "chatPrefix": "§d[BeaconEvent]",
+      "durationMinutes": 30
+    },
+    {
       "serverKeywords": ["holyworld", "mstnetwork"],
       "regexPattern": "▍\\s*([А-Яа-яA-Za-z]+).*?Координаты:\\s*(-?\\d+)\\s+(-?\\d+)\\s+(-?\\d+)",
       "nameGroup": 1,
