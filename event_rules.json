@@ -1,0 +1,63 @@
+{
+  "rules": [
+    {
+      "serverKeywords": ["funtime"],
+      "regexPattern": "(.+?)\\s*Появился\\s+на\\s+координатах\\s*\\[\\s*(-?\\d+)\\s+(-?\\d+)\\s+(-?\\d+)\\s*\\]",
+      "nameGroup": 1,
+      "xGroup": 2,
+      "yGroup": 3,
+      "zGroup": 4,
+      "colorHex": "FFFF0000",
+      "chatPrefix": "§c[KotaEvent]",
+      "durationMinutes": 30
+    },
+    {
+      "serverKeywords": ["holyworld", "mstnetwork"],
+      "regexPattern": "▍\\s*([А-Яа-яA-Za-z]+).*?Координаты:\\s*(-?\\d+)\\s+(-?\\d+)\\s+(-?\\d+)",
+      "nameGroup": 1,
+      "xGroup": 2,
+      "yGroup": 3,
+      "zGroup": 4,
+      "colorHex": "FF00E3D2",
+      "chatPrefix": "§b[KotaEvents]",
+      "durationMinutes": 30
+    },
+    {
+      "serverKeywords": ["reallyworld", "rw."],
+      "regexPattern": "(-?\\d+)\\s+(-?\\d+)\\s+(-?\\d+)",
+      "nameGroup": -1,
+      "xGroup": 1,
+      "yGroup": 2,
+      "zGroup": 3,
+      "colorHex": "FFFFAA00",
+      "chatPrefix": "§6[KotaEvents]",
+      "durationMinutes": 30,
+      "keywordRules": [
+        {
+          "eventName": "Шахта Дворфов",
+          "conditions": [["ограбление", "шахт", "дворф"]]
+        },
+        {
+          "eventName": "Битва с Боссом",
+          "conditions": [["битва с боссом"], ["босс", "появился"]]
+        },
+        {
+          "eventName": "Защита Особняка",
+          "conditions": [["защита особняка"], ["особняк"]]
+        },
+        {
+          "eventName": "Захват Талисмана",
+          "conditions": [["захват талисмана"], ["талисман"]]
+        },
+        {
+          "eventName": "Состязание",
+          "conditions": [["состязание"]]
+        },
+        {
+          "eventName": "Айрдроп",
+          "conditions": [["айрдроп"], ["аирдроп"]]
+        }
+      ]
+    }
+  ]
+}
